@@ -32,7 +32,6 @@ button, input, textarea, select { font: inherit; }
 .header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-mark { width: 34px; height: 34px; border: 1px solid var(--navy); display: grid; place-items: center; font-size: 11px; letter-spacing: .12em; font-weight: 700; }
-img.brand-mark { width: 40px; height: 40px; border: none; display: block; object-fit: contain; }
 .brand-name { font-family: var(--serif); font-size: 20px; letter-spacing: .01em; }
 .site-nav { display: flex; align-items: center; gap: 30px; font-size: 14px; }
 .site-nav a { text-decoration: none; }
@@ -151,6 +150,38 @@ h3 { font-size: 30px; letter-spacing: -.015em; }
 .footer-nav a:hover { color: white; }
 .copyright { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.13); padding-top: 24px; margin-top: 30px !important; }
 
+.brand-mark-img { width: 40px; height: 40px; display: block; }
+.hero-financeos { font-size: 17px; line-height: 1.65; color: var(--navy-2); border-left: 2px solid var(--brass); padding-left: 16px; max-width: 640px; margin: -14px 0 34px; }
+.hero-proof-financeos { margin-top: 10px; padding-top: 0; }
+
+.verticals { background: var(--white); }
+.vertical-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.vertical-card { padding: 36px; background: var(--paper); min-height: 250px; }
+.vertical-card h3 { font-size: 28px; margin: 0 0 22px; }
+.vertical-card p { color: var(--slate); margin: 0; }
+.vertical-card-request { background: var(--navy); }
+.vertical-card-request h3 { color: white; }
+.vertical-card-request p { color: rgba(255,255,255,.74); margin-bottom: 24px; }
+.vertical-card-request .button-secondary { border-color: rgba(255,255,255,.7); color: white; background: transparent; }
+.vertical-card-request .button-secondary:hover { background: rgba(255,255,255,.08); }
+
+.engage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+.engage-card { border: 1px solid var(--line); padding: 28px; background: rgba(255,255,255,.35); }
+.engage-card h3 { font-size: 23px; margin: 0 0 10px; }
+.engage-card p { color: var(--slate); margin: 0; font-size: 15px; }
+
+.pcaob { background: var(--paper-2); }
+.pcaob-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.pcaob-card { padding: 36px; background: var(--white); min-height: 250px; }
+.pcaob-card h3 { font-size: 27px; margin: 0 0 20px; }
+.pcaob-card p { color: var(--slate); margin: 0; }
+
+.founder-byline { margin-top: 26px; color: var(--slate); font-size: 15px; max-width: 340px; }
+.contact-direct a { color: var(--navy); font-weight: 700; }
+.footer-contact { margin-top: 14px !important; }
+.footer-contact a { color: rgba(255,255,255,.85); }
+.footer-contact a:hover { color: white; }
+
 .reveal { opacity: 0; transform: translateY(12px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
@@ -169,6 +200,9 @@ h3 { font-size: 30px; letter-spacing: -.015em; }
   .approach-grid, .founder-grid, .contact-grid { grid-template-columns: 1fr; gap: 60px; }
   .approach-intro { position: static; }
   .audience-grid { grid-template-columns: 1fr; }
+  .vertical-grid { grid-template-columns: repeat(2, 1fr); }
+  .engage-grid, .pcaob-grid { grid-template-columns: 1fr; }
+  .founder-byline { max-width: none; }
   .systems-inner { grid-template-columns: 1fr; gap: 10px; }
 }
 
@@ -227,6 +261,9 @@ h3 { font-size: 30px; letter-spacing: -.015em; }
   .proof-grid > div, .proof-grid > div:nth-child(3) { border-left: 0; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.13); }
   .proof-grid > div:last-child { border-bottom: 0; }
   .service-grid { grid-template-columns: 1fr; }
+  .vertical-grid { grid-template-columns: 1fr; }
+  .vertical-card, .pcaob-card { min-height: auto; padding: 30px 26px; }
+  .hero-financeos { font-size: 16px; margin-top: -8px; }
   .service-card-wide { grid-column: auto; display: block; }
   .service-card { min-height: auto; padding: 30px 26px; }
   .service-card h3, .service-card-wide h3 { margin: 28px 0 14px; }
