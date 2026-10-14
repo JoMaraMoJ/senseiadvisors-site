@@ -36,6 +36,43 @@
     items.forEach((item) => item.classList.add('is-visible'));
   }
 
+
+  const menuWraps = document.querySelectorAll('.nav-dropdown-wrap[data-menu]');
+  const megaPanels = document.querySelectorAll('.nav-mega[data-panel]');
+  if (header && menuWraps.length && megaPanels.length) {
+    const closeAll = () => {
+      megaPanels.forEach((p) => p.classList.remove('open'));
+      menuWraps.forEach((w) => w.querySelector(':scope > a')?.setAttribute('aria-expanded', 'false'));
+    };
+    const openPanel = (key) => {
+      closeAll();
+      document.querySelector(`.nav-mega[data-panel="${key}"]`)?.classList.add('open');
+      document.querySelector(`.nav-dropdown-wrap[data-menu="${key}"]`)?.querySelector(':scope > a')?.setAttribute('aria-expanded', 'true');
+    };
+    menuWraps.forEach((wrap) => {
+      const key = wrap.dataset.menu;
+      const toggle = wrap.querySelector(':scope > a');
+      wrap.addEventListener('mouseenter', () => openPanel(key));
+      toggle?.addEventListener('click', (event) => {
+        if (window.matchMedia('(hover: none)').matches) {
+          const panel = document.querySelector(`.nav-mega[data-panel="${key}"]`);
+          if (!panel?.classList.contains('open')) { event.preventDefault(); openPanel(key); }
+        }
+      });
+    });
+    megaPanels.forEach((panel) => panel.addEventListener('mouseenter', () => openPanel(panel.dataset.panel)));
+    header.addEventListener('mouseleave', closeAll);
+    document.addEventListener('click', (event) => { if (!header.contains(event.target)) closeAll(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeAll(); });
+    header.addEventListener('focusin', (event) => {
+      const wrap = event.target.closest?.('.nav-dropdown-wrap[data-menu]');
+      const panel = event.target.closest?.('.nav-mega[data-panel]');
+      if (wrap) openPanel(wrap.dataset.menu);
+      else if (panel) openPanel(panel.dataset.panel);
+    });
+    header.addEventListener('focusout', (event) => { if (!header.contains(event.relatedTarget)) closeAll(); });
+  }
+
   const inquiryForm = document.querySelector('form[name="sensei-inquiry"]');
   const formStatus = inquiryForm?.querySelector('.form-status');
   const submitButton = inquiryForm?.querySelector('.form-submit');
