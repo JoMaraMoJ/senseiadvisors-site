@@ -341,3 +341,13 @@ a.mega-item:hover .mega-name { color: var(--brass); }
   .intl-proof { display: grid; gap: 7px; }
   .intl-proof span + span::before { display: none; }
 }
+
+/* Language switcher (wave 1) */
+.lang-switch{display:flex;gap:.45rem;align-items:center;margin-left:.9rem;font-size:.68rem;letter-spacing:.08em}
+.lang-switch a{color:inherit;opacity:.55;text-decoration:none;font-weight:600}
+.lang-switch a:hover{opacity:1}
+.lang-switch a.on{opacity:1;color:#B28A56}
+@media (max-width:720px){.lang-switch{gap:.32rem;margin-left:.5rem;font-size:.62rem}}
+/* Long-word safety for translated pages (German/French compounds) */
+html:not([lang="en"]) h1, html:not([lang="en"]) h2, html:not([lang="en"]) h3 { hyphens: auto; overflow-wrap: anywhere; }
+html:not([lang="en"]) .service-card, html:not([lang="en"]) .mega-item, html:not([lang="en"]) .gate-card, html:not([lang="en"]) .proof-chip { overflow-wrap: anywhere; }
