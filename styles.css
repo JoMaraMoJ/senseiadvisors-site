@@ -180,6 +180,7 @@ h3 { font-size: 30px; letter-spacing: -.015em; }
 .vertical-card-request .button-secondary:hover { background: rgba(255,255,255,.08); }
 
 .engage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+.engage-grid.single { grid-template-columns: 1fr; }
 .engage-card { border: 1px solid var(--line); padding: 28px; background: rgba(255,255,255,.35); }
 .engage-card h3 { font-size: 23px; margin: 0 0 10px; }
 .engage-card p { color: var(--slate); margin: 0; font-size: 15px; }
