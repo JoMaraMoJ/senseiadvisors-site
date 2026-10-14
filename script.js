@@ -54,7 +54,7 @@
       const toggle = wrap.querySelector(':scope > a');
       wrap.addEventListener('mouseenter', () => openPanel(key));
       toggle?.addEventListener('click', (event) => {
-        if (window.matchMedia('(hover: none)').matches) {
+        if (window.matchMedia('(hover: none) and (min-width: 721px)').matches) {
           const panel = document.querySelector(`.nav-mega[data-panel="${key}"]`);
           if (!panel?.classList.contains('open')) { event.preventDefault(); openPanel(key); }
         }
