@@ -121,6 +121,20 @@ h3 { font-size: 30px; letter-spacing: -.015em; }
 .systems .eyebrow { color: var(--navy); margin: 0; }
 .systems p:last-child { margin: 0; font-family: var(--serif); font-size: 23px; line-height: 1.5; }
 
+.workspace { background: var(--navy); color: white; }
+.workspace h2 { color: white; }
+.workspace-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 80px; align-items: start; }
+.workspace-copy > p:not(.eyebrow) { font-size: 18px; color: rgba(255,255,255,.72); }
+.workspace-cta { margin-top: 36px; }
+.button-light { background: var(--paper); color: var(--navy); border-color: var(--paper); }
+.button-light:hover { background: white; }
+.workspace-note { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,.55); }
+.workspace-list { list-style: none; margin: 0; padding: 0; }
+.workspace-list li { padding: 18px 0; border-top: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.85); font-size: 16px; }
+.workspace-list li:last-child { border-bottom: 1px solid rgba(255,255,255,.16); }
+.workspace-list span { display: block; color: var(--brass); font-size: 12px; letter-spacing: .1em; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; }
+@media (max-width: 900px) { .workspace-grid { grid-template-columns: 1fr; gap: 44px; } }
+
 .contact { background: var(--white); }
 .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: start; }
 .contact-copy h2 { margin-bottom: 30px; }
