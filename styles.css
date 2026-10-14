@@ -329,6 +329,7 @@ a.mega-item:hover .mega-name { color: var(--brass); }
    Cards reuse .pcaob-card (inherits padding, white ground, min-height and the
    existing <=720px card rule). Only the 2x2 grid, proof line and note are new. */
 .intl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.proof-note { font-size: 12.5px; line-height: 1.55; color: var(--slate); margin: 12px 0 0; max-width: 62ch; }
 .intl-proof { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 36px 0 0; color: var(--slate); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
 .intl-proof span + span::before { content: '•'; margin-right: 20px; color: var(--brass); }
 .intl-note { margin: 16px 0 0; color: var(--slate); max-width: 900px; }
