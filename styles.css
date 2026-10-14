@@ -343,6 +343,13 @@ a.mega-item:hover .mega-name { color: var(--brass); }
   .intl-proof span + span::before { display: none; }
 }
 
+/* FAQ (2026-10-14) */
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.faq-item { padding: 30px 34px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.18); }
+.faq-item h3 { margin: 0 0 12px; font-size: 19px; }
+.faq-item p { color: var(--slate); margin: 0; }
+@media (max-width: 720px) { .faq-grid { grid-template-columns: 1fr; } .faq-item { padding: 24px 22px; } }
+
 /* Language switcher (wave 1) */
 .lang-switch{display:flex;gap:.45rem;align-items:center;margin-left:.9rem;font-size:.68rem;letter-spacing:.08em}
 .lang-switch a{color:inherit;opacity:.55;text-decoration:none;font-weight:600}
