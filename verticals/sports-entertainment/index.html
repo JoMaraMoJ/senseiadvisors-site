@@ -325,6 +325,36 @@
       </div>
     </section>
 
+    <section class="section intl" id="international" style="padding-top:72px;padding-bottom:72px" aria-labelledby="intl-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">International</p>
+          <h2 id="intl-title">Built for US and international diligence: the International layer.</h2>
+          <p>FinanceOS is one build with modular activation. Each client picks a US track or an International track — the system underneath is the same. Every standard is anchored two ways: to the FASB Codification and to IFRS Accounting Standards as issued by the IASB. FASB- and IASB-friendly by design, so a diligence team reads the same file on either side of the Atlantic — no translation.</p>
+        </div>
+        <div class="intl-grid">
+          <article class="pcaob-card reveal">
+            <h3>Framework set per entity</h3>
+            <p>Each entity carries its statutory framework, the group reporting framework, and its presentation currency on one register. Nothing is forced into a single framework.</p>
+          </article>
+          <article class="pcaob-card reveal">
+            <h3>The bridge close</h3>
+            <p>Local statutory close first. Then the framework bridge. Then group consolidation, then the investor pack. The bridge ties with $0 unexplained — or the close does not pass Gate G5.</p>
+          </article>
+          <article class="pcaob-card reveal">
+            <h3>Instruments read both ways</h3>
+            <p>SAFEs, convertibles, preferred shares, and warrants are analysed under both frameworks before signing — because the same instrument can be equity in one framework and a liability in the other.</p>
+          </article>
+          <article class="pcaob-card reveal">
+            <h3>Local rules stay local</h3>
+            <p>Statutory calendars, indirect taxes, withholding, and R&D credit evidence are captured in registers, and local advisors file. FinanceOS never replaces the local statutory accountant.</p>
+          </article>
+        </div>
+        <p class="intl-proof reveal"><span>5 vertical pilots</span><span>482 acceptance checks passed</span><span>Gate G5 Diligence-Ready — Pre-seed to Series C</span><span>8 deliverables per vertical (IX-1 to IX-8)</span></p>
+        <p class="intl-note reveal">In the Sports &amp; Entertainment pilot: 12 events in three currencies, withholding tied three ways at $128,969.20, and an IAS 37 provision recognised where ASC 450 disclosed only.</p>
+      </div>
+    </section>
+
     <section class="section services" aria-labelledby="engage-title">
       <div class="shell">
         <div class="section-heading reveal">
@@ -394,17 +424,25 @@
             <label>Company<input type="text" name="company" autocomplete="organization"></label>
           </div>
           <label>Email<input type="email" name="email" autocomplete="email" required></label>
-          <label>Your vertical
-            <select name="vertical">
-              <option value="" disabled>Select one</option>
-              <option>SaaS</option>
-              <option>Biotech</option>
-              <option>Cannabis</option>
-              <option>Manufacturing</option>
-              <option selected>Sports &amp; Entertainment</option>
-              <option>Other / multiple</option>
-            </select>
-          </label>
+          <div class="form-row two-col">
+            <label>Your vertical
+              <select name="vertical">
+                <option value="" disabled>Select one</option>
+                <option>SaaS</option>
+                <option>Biotech</option>
+                <option>Cannabis</option>
+                <option>Manufacturing</option>
+                <option selected>Sports &amp; Entertainment</option>
+                <option>Other / multiple</option>
+              </select>
+            </label>
+            <label>Track
+              <select name="track">
+                <option selected>US</option>
+                <option>International</option>
+              </select>
+            </label>
+          </div>
           <label>What do you need help with?
             <select name="need" required>
               <option value="" selected disabled>Select one</option>
