@@ -364,3 +364,39 @@ a.mega-item:hover .mega-name { color: var(--brass); }
 /* Long-word safety for translated pages (German/French compounds) */
 html:not([lang="en"]) h1, html:not([lang="en"]) h2, html:not([lang="en"]) h3 { hyphens: auto; overflow-wrap: anywhere; }
 html:not([lang="en"]) .service-card, html:not([lang="en"]) .mega-item, html:not([lang="en"]) .gate-card, html:not([lang="en"]) .proof-chip { overflow-wrap: anywhere; }
+
+/* For Firms — seat-cost calculator (appended 2026-10-22) */
+.ff-hero { padding-bottom: 24px; }
+.ff-lede { font-size: clamp(17px, 1.5vw, 20px); line-height: 1.7; color: var(--slate); max-width: 860px; margin: 0; }
+.ff-calc-section { padding-top: 24px; }
+.calc-card { display: grid; grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr); gap: 0; border: 1px solid var(--line); background: var(--white); box-shadow: var(--shadow); }
+.calc-inputs { padding: 36px; border-right: 1px solid var(--line); }
+.calc-inputs label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; margin-bottom: 26px; }
+.calc-field { display: flex; align-items: baseline; gap: 8px; font-size: 18px; font-weight: 400; text-transform: none; letter-spacing: 0; margin-top: 8px; color: var(--slate); }
+.calc-field input { width: 110px; border: 0; border-bottom: 1px solid rgba(11,20,32,.28); background: transparent; color: var(--ink); padding: 8px 2px; font-size: 22px; font-weight: 700; outline: none; }
+.calc-field input:focus { border-bottom-color: var(--brass); }
+.calc-note { font-size: 13px; line-height: 1.6; color: var(--slate); margin: 6px 0 0; }
+.calc-results { padding: 36px; display: flex; flex-direction: column; gap: 22px; }
+.result-panel { border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.result-label { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--slate); }
+.result-figure { margin: 0; font-family: var(--serif); font-size: clamp(30px, 3vw, 42px); line-height: 1.1; color: var(--navy); }
+.result-figure span { font-size: 15px; font-family: var(--sans); color: var(--slate); margin-left: 6px; }
+.result-panel-hot .result-figure { color: var(--brass); }
+.result-sub { margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: var(--slate); }
+.calc-verdict { margin: 0; font-size: 17px; line-height: 1.6; font-weight: 600; color: var(--navy-2); }
+.calc-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+.ff-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.ff-cell { background: var(--white); border: 1px solid var(--line); padding: 30px; }
+.ff-cell h3 { margin: 0 0 10px; font-family: var(--serif); font-weight: 600; color: var(--navy); }
+.ff-cell p { margin: 0; color: var(--slate); line-height: 1.65; }
+.ff-pilot { margin: 34px 0 0; max-width: 860px; font-size: 17px; line-height: 1.7; color: var(--navy-2); border-left: 2px solid var(--brass); padding-left: 18px; }
+.ff-optional { text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--slate); }
+@media (max-width: 860px) {
+  .calc-card { grid-template-columns: 1fr; }
+  .calc-inputs { border-right: 0; border-bottom: 1px solid var(--line); }
+  .ff-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .site-header, .site-footer, .ff-hero, .ff-how, .calc-inputs, .calc-actions, .ff-contact { display: none !important; }
+  .calc-card { box-shadow: none; border: 0; }
+}
